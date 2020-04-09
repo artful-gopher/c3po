@@ -24,3 +24,9 @@ jobs:
       - get: source-code
       - task: task-send-reminder
         file: source-code/task-scripts/task.yml
+        params:
+          TZ: ((TZ))
+          CHANNEL_ID: ((CHANNEL_ID))
+          SLACK_API_TOKEN: ((SLACK_API_TOKEN))
+          GOOGLE_SHEET_URL: ((GOOGLE_SHEET_URL))
+          SLACK_HANDLE: ((SLACK_HANDLE))
