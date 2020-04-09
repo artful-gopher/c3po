@@ -7,6 +7,6 @@ image_resource:
     tag: "1.0"
 
 run:
-  path: env
-  args: []
+  path: /usr/local/bin/python3
+  args: [main.py]
   
