@@ -23,4 +23,4 @@ jobs:
       #   trigger: true
       - get: source-code
       - task: task-send-reminder
-        file: c3po/task-scripts/task.yml
+        file: source-code/task-scripts/task.yml

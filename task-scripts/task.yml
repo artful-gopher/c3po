@@ -5,12 +5,14 @@ image_resource:
   source:
     repository: artfulgopher/tobot_env
     tag: "1.0"
-  run:
-    path: ls
-    args: [-lrth]
-  params:
-    TZ: ((TZ))
-    CHANNEL_ID: ((CHANNEL_ID))
-    SLACK_API_TOKEN: ((SLACK_API_TOKEN))
-    GOOGLE_SHEET_URL: ((GOOGLE_SHEET_URL))
-    SLACK_HANDLE: ((SLACK_HANDLE))
+
+run:
+  path: ls
+  args: [-lrth]
+  
+params:
+  TZ: ((TZ))
+  CHANNEL_ID: ((CHANNEL_ID))
+  SLACK_API_TOKEN: ((SLACK_API_TOKEN))
+  GOOGLE_SHEET_URL: ((GOOGLE_SHEET_URL))
+  SLACK_HANDLE: ((SLACK_HANDLE))
