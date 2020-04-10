@@ -10,10 +10,10 @@ resources:
   type: time
   icon: clock-outline
   source:
-    #start: 1:00 PM
-    #stop: 1:15 PM
+    start: 1:00 PM
+    stop: 3:00 PM
     days: [Monday, Tuesday, Wednesday, Thursday, Friday]
-    interval: 2m
+    interval: 10m
     location: America/Los_Angeles
 
 jobs:
