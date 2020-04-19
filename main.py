@@ -28,7 +28,7 @@ If its neither Saturday nor Sunday:
     4. Send the reminder with correct names
 '''
 # rstrip method strips away the trailing newline from 
-if(day.rstrip('\n') != 'Sunday' or day.rstrip('\n' != 'Saturday')):
+if(day.rstrip('\n') != 'Sunday' or day.rstrip('\n') != 'Saturday'):
     # 1 todays_date
     todays_date = str(subprocess.check_output(["date", "+%Y-%m-%d"]), 'utf-8')
     print(todays_date)
