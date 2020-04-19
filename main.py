@@ -51,8 +51,4 @@ if(day.rstrip('\n') != 'Sunday' or day.rstrip('\n' != 'Saturday')):
                 print(name1+" & "+name2)
                 # 4 send the reminder
                 client = slack.WebClient(token=os.environ['SLACK_API_TOKEN'], ssl=False)
-                response1 = client.chat_postMessage(channel=os.environ['CHANNEL_ID'], text=":robot_face: Hi "+os.environ['SLACK_HANDLE1']+ " Quick Reminder: This week\'s EC to WC TO pair is "+name1+" and "+name2+" :robot_face:")
-                # 5 sleep for 10 minutes
-                os.system("sleep 600")
-                # 6 send reminder asking for any TO from EC to WC
-                response2 = client.chat_postMessage(channel=os.environ['CHANNEL_ID'], text=":robot_face: Hi "+os.environ['SLACK_HANDLE2']+ " Any TO? Please start adding TO notes and entering into the tool. Thanks! :minion_yah:")
+                response1 = client.chat_postMessage(channel=os.environ['CHANNEL_ID'], text=":robot_face: Hi "+os.environ['SLACK_HANDLE']+ " Quick Reminder: This week\'s EC to WC TO pair is "+name1+" and "+name2+" :robot_face:")
