@@ -51,4 +51,4 @@ if(day.rstrip('\n') != 'Sunday' or day.rstrip('\n' != 'Saturday')):
                 print(name1+" & "+name2)
                 # 4 send the reminder
                 client = slack.WebClient(token=os.environ['SLACK_API_TOKEN'], ssl=False)
-                response1 = client.chat_postMessage(channel=os.environ['CHANNEL_ID'], text=":robot_face: Hi "+os.environ['SLACK_HANDLE']+ " Quick Reminder: This week\'s EC to WC TO pair is "+name1+" and "+name2+" :robot_face:")
+                response1 = client.chat_postMessage(channel=os.environ['CHANNEL_ID'], text=":robot_face: Hi "+os.environ['SLACK_WEST_USERGROUP']+ " Quick Reminder: This week\'s EC to WC TO pair is "+name1+" and "+name2+" :robot_face:")
