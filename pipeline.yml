@@ -16,7 +16,7 @@ resources:
     location: America/Los_Angeles
 
 jobs:
-  - name: job-send-reminder
+  - name: remind-about-TOPair
     public: true
     plan:
       - get: only-weekdays-at-1pm-pst
@@ -29,6 +29,6 @@ jobs:
           CHANNEL_ID: ((CHANNEL_ID))
           SLACK_API_TOKEN: ((SLACK_API_TOKEN))
           GOOGLE_SHEET_URL: ((GOOGLE_SHEET_URL))
-          SLACK_HANDLE: ((SLACK_HANDLE))
+          SLACK_HANDLE: ((SLACK_WEST_USERGROUP))
         input_mapping:
           c3po-files: source-code
