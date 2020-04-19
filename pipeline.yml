@@ -41,7 +41,7 @@ jobs:
       #  trigger: true
       - get: source-code
       - task: remind-TOPair
-        file: source-code/task-scripts/remind-TOPair.yml
+        file: source-code/task-scripts/remind-about-TOPair.yml
         params:
           TZ: ((TZ))
           CHANNEL_ID: ((CHANNEL_ID))
