@@ -4,7 +4,7 @@ resources:
   type: git
   source:
     uri: https://github.com/artful-gopher/c3po.git 
-    branch: master
+    branch: develop
 
 - name: only-weekdays-at-1pm-pst
   type: time
