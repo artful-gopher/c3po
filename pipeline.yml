@@ -20,8 +20,8 @@ resources:
   type: time
   icon: clock-outline
   source:
-    start: 12:55 PM
-    stop: 1:00 PM
+    #start: 12:55 PM
+    #stop: 1:00 PM
     #days: [Monday, Tuesday, Wednesday, Thursday, Friday]
     interval: 5m
     location: America/Los_Angeles
@@ -30,8 +30,8 @@ resources:
   type: time
   icon: clock-outline
   source:
-    start: 3:55 PM
-    stop: 4:00 PM
+    #start: 3:55 PM
+    #stop: 4:00 PM
     #days: [Monday, Tuesday, Wednesday, Thursday, Friday]
     interval: 2m
     location: America/Los_Angeles
