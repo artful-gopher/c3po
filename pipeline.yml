@@ -7,15 +7,15 @@ resources:
     uri: https://github.com/artful-gopher/c3po.git 
     branch: develop
 
-- name: only-weekdays-at-1245pm-pst
-  type: time
-  icon: clock-outline
-  source:
-    #start: 12:45 PM
-    #stop: 1:00 PM
-    #days: [Monday, Tuesday, Wednesday, Thursday, Friday]
-    interval: 2m
-    location: America/Los_Angeles
+# - name: only-weekdays-at-1245pm-pst
+#   type: time
+#   icon: clock-outline
+#   source:
+#     #start: 12:45 PM
+#     #stop: 1:00 PM
+#     #days: [Monday, Tuesday, Wednesday, Thursday, Friday]
+#     interval: 2m
+#     location: America/Los_Angeles
 
 - name: only-weekdays-at-1255pm-pst
   type: time
@@ -24,7 +24,7 @@ resources:
     #start: 12:55 PM
     #stop: 1:00 PM
     #days: [Monday, Tuesday, Wednesday, Thursday, Friday]
-    interval: 4m
+    interval: 2m
     location: America/Los_Angeles
 
 #- name: only-weekdays-at-355pm-pst
@@ -37,22 +37,22 @@ resources:
 #    location: America/Los_Angeles
 
 jobs:
-  - name: remind-about-TOPair
-    public: true
-    plan:
-      - get: only-weekdays-at-1245pm-pst
-        trigger: true
-      - get: source-code
-      - task: remind-TOPair
-        file: source-code/task-scripts/remind-about-TOPair.yml
-        params:
-          TZ: ((TZ))
-          CHANNEL_ID: ((CHANNEL_ID))
-          SLACK_API_TOKEN: ((SLACK_API_TOKEN))
-          GOOGLE_SHEET_URL: ((GOOGLE_SHEET_URL))
-          SLACK_WEST_USERGROUP: ((SLACK_WEST_USERGROUP))
-        input_mapping:
-          c3po-files: source-code
+  # - name: remind-about-TOPair
+  #   public: true
+  #   plan:
+  #     - get: only-weekdays-at-1245pm-pst
+  #       trigger: true
+  #     - get: source-code
+  #     - task: remind-TOPair
+  #       file: source-code/task-scripts/remind-about-TOPair.yml
+  #       params:
+  #         TZ: ((TZ))
+  #         CHANNEL_ID: ((CHANNEL_ID))
+  #         SLACK_API_TOKEN: ((SLACK_API_TOKEN))
+  #         GOOGLE_SHEET_URL: ((GOOGLE_SHEET_URL))
+  #         SLACK_WEST_USERGROUP: ((SLACK_WEST_USERGROUP))
+  #       input_mapping:
+  #         c3po-files: source-code
   - name: ask-about-TO
     public: true
     plan:
@@ -65,5 +65,8 @@ jobs:
           CHANNEL_ID: ((CHANNEL_ID))
           SLACK_API_TOKEN: ((SLACK_API_TOKEN))
           SLACK_EAST_USERGROUP: ((SLACK_EAST_USERGROUP))
+          SLACK_WEST_USERGROUP: ((SLACK_WEST_USERGROUP))
+          SLACK_EMEA_USERGROUP: ((SLACK_EMEA_USERGROUP))
+          SLACK_APJ_USERGROUP: ((SLACK_APJ_USERGROUP))
         input_mapping:
           c3po-files: source-code
