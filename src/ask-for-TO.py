@@ -15,4 +15,4 @@ if(time_now.rstrip('\n') == '12'):
 if(time_now.rstrip('\n') == '15'):
     SLACK_USERGROUP = os.environ['SLACK_WEST_USERGROUP']
 
-response = client.chat_postMessage(channel=os.environ['CHANNEL_ID'], text=":minion_yah: Hi "+SLACK_USERGROUP+ " Any TO? Please update the tool with your TO case: https://commit.cfapps.io/turnover and begin reaching out to your pair :blob_council:")
+response = client.chat_postMessage(channel=os.environ['CHANNEL_ID'], text=":minion_yah: Hi "+SLACK_USERGROUP+ " Any TO? Please update the tool with your TO case: "+os.environ['COMMITS_LINK']+" and begin reaching out to your pair :blob_council:")
