@@ -11,10 +11,9 @@ resources:
   type: time
   icon: clock-outline
   source:
-    #start: 12:45 PM
-    #stop: 1:00 PM
-    #days: [Monday, Tuesday, Wednesday, Thursday, Friday]
-    interval: 2m
+    start: 12:45 PM
+    stop: 1:00 PM
+    days: [Monday, Tuesday, Wednesday, Thursday, Friday]
     location: America/Los_Angeles
 
 - name: only-weekdays-at-1255pm-pst
