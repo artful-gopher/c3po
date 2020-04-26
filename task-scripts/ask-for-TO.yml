@@ -11,5 +11,5 @@ inputs:
 
 run:
   path: /usr/local/bin/python3
-  args: [c3po-files/main.py]
+  args: [c3po-files/src/ask-for-TO.py]
   
