@@ -5,7 +5,7 @@ resources:
   icon: github-circle
   source:
     uri: https://github.com/artful-gopher/c3po.git 
-    branch: develop
+    branch: master
 
 - name: only-weekdays-at-1245pm-pst
   type: time
