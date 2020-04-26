@@ -20,20 +20,18 @@ resources:
   type: time
   icon: clock-outline
   source:
-    #start: 12:55 PM
-    #stop: 1:00 PM
-    #days: [Monday, Tuesday, Wednesday, Thursday, Friday]
-    interval: 5m
+    start: 12:55 PM
+    stop: 1:00 PM
+    days: [Monday, Tuesday, Wednesday, Thursday, Friday]
     location: America/Los_Angeles
 
-- name: only-weekdays-at-355pm-pst
+- name: only-weekdays-at-425pm-pst
   type: time
   icon: clock-outline
   source:
-    #start: 3:55 PM
-    #stop: 4:00 PM
-    #days: [Monday, Tuesday, Wednesday, Thursday, Friday]
-    interval: 2m
+    start: 4:25 PM
+    stop: 4:30 PM
+    days: [Monday, Tuesday, Wednesday, Thursday, Friday]
     location: America/Los_Angeles
 
 jobs:
@@ -72,7 +70,7 @@ jobs:
   - name: ask-about-TO-WC
     public: true
     plan:
-      - get: only-weekdays-at-355pm-pst
+      - get: only-weekdays-at-425pm-pst
         trigger: true
       - get: source-code
       - task: ask-for-TO
