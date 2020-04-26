@@ -66,6 +66,7 @@ jobs:
           CHANNEL_ID: ((CHANNEL_ID))
           SLACK_API_TOKEN: ((SLACK_API_TOKEN))
           SLACK_USERGROUP: ((SLACK_EAST_USERGROUP))
+          COMMITS_LINK: ((COMMITS_LINK))
         input_mapping:
           c3po-files: source-code
   - name: ask-about-TO-WC
@@ -81,5 +82,6 @@ jobs:
           CHANNEL_ID: ((CHANNEL_ID))
           SLACK_API_TOKEN: ((SLACK_API_TOKEN))
           SLACK_USERGROUP: ((SLACK_WEST_USERGROUP))
+          COMMITS_LINK: ((COMMITS_LINK))
         input_mapping:
           c3po-files: source-code
