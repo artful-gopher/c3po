@@ -53,11 +53,24 @@ jobs:
           SLACK_WEST_USERGROUP: ((SLACK_WEST_USERGROUP))
         input_mapping:
           c3po-files: source-code
-  - name: ask-about-TO
+  - name: ask-about-TO-EC
     public: true
     plan:
       - get: only-weekdays-at-1255pm-pst
         trigger: true
+      - get: source-code
+      - task: ask-for-TO
+        file: source-code/task-scripts/ask-for-TO.yml
+        params:
+          TZ: ((TZ))
+          CHANNEL_ID: ((CHANNEL_ID))
+          SLACK_API_TOKEN: ((SLACK_API_TOKEN))
+          SLACK_USERGROUP: ((SLACK_EAST_USERGROUP))
+        input_mapping:
+          c3po-files: source-code
+  - name: ask-about-TO-WC
+    public: true
+    plan:
       - get: only-weekdays-at-355pm-pst
         trigger: true
       - get: source-code
@@ -67,7 +80,6 @@ jobs:
           TZ: ((TZ))
           CHANNEL_ID: ((CHANNEL_ID))
           SLACK_API_TOKEN: ((SLACK_API_TOKEN))
-          SLACK_EAST_USERGROUP: ((SLACK_EAST_USERGROUP))
-          SLACK_WEST_USERGROUP: ((SLACK_WEST_USERGROUP))
+          SLACK_USERGROUP: ((SLACK_WEST_USERGROUP))
         input_mapping:
           c3po-files: source-code
