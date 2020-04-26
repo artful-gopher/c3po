@@ -66,6 +66,7 @@ jobs:
         params:
           TZ: ((TZ))
           CHANNEL_ID: ((CHANNEL_ID))
+          SLACK_API_TOKEN: ((SLACK_API_TOKEN))
           SLACK_EAST_USERGROUP: ((SLACK_EAST_USERGROUP))
           SLACK_WEST_USERGROUP: ((SLACK_WEST_USERGROUP))
         input_mapping:
