@@ -12,7 +12,7 @@ print(time_now.rstrip('\n'))
 if(time_now.rstrip('\n') == '12'):
     SLACK_USERGROUP = os.environ['SLACK_EAST_USERGROUP']
 
-if(time_now.rstrip('\n') == '17'):
+if(time_now.rstrip('\n') == '20'):
     SLACK_USERGROUP = os.environ['SLACK_WEST_USERGROUP']
 
 response = client.chat_postMessage(channel=os.environ['CHANNEL_ID'], text=":minion_yah: Hi "+SLACK_USERGROUP+ " Any TO? Please update the tool with your TO case: "+os.environ['COMMITS_LINK']+" and begin reaching out to your pair :blob_council:")
