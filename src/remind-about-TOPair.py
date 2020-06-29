@@ -39,7 +39,7 @@ if(day.rstrip('\n') != 'Sunday' or day.rstrip('\n') != 'Saturday'):
     print(mondays_date.strftime("%Y-%m-%d"))
 
     # 3 get name of the TO pair
-    os.system("curl -s $GOOGLE_SHEET_URL > /tmp/tosheet.csv") # get csv data from google sheet
+    os.system("curl -sL $GOOGLE_SHEET_URL > /tmp/tosheet.csv") # get csv data from google sheet
 
     
     with open('/tmp/tosheet.csv') as csvfile:
