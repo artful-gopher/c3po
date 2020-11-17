@@ -3,7 +3,7 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: artfulgopher/tobot_env
+    repository: harbor.slot-59.pez.vmware.com/tobot/artfulgopher/tobot_env
     tag: "1.0"
 
 inputs:
